@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>WING &#187; Downloads &#187; CITING Dataset and Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Twitter, CITING, Image Tweets, Recommendation, Persoanlzied">
+    <meta name="author" content="Tao CHEN">
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <!--<link href="js/bootstrap-responsive.css" rel="stylesheet">-->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+
+
+
+  <div class="container">
+  
+  <div class="sidebar">
+    	<script type="text/javascript" src=	"http://feedjit.com/serve/?vv=932&tft=3&dd=0&wid=0804fba767d140cd&pid=0&proid=0&bc=FFFFFF&tc=000000&brd1=012B6B&lnk=135D9E&hc=FFFFFF&hfc=2853A8&btn=C99700&ww=150&wne=5&wh=WING+Live+Traffic+Feed&hl=0&hlnks=0&hfce=0&srefs=1&hbars=0">
+    	</script>
+    	<noscript><a href="http://feedjit.com/">Live Traffic Feed</a></noscript>
+    </div>
+    
+     
+   <div class="row" id="content">
+   
+   <div class="row">
+      <p class="pull-right"><a href="http://wing.comp.nus.edu.sg/">Back to WING</a></p>
+    </div>
+    
+     <span style="text-align:center">
+   		 <h1>Code and Datasets for Image Tweet Modelling and Recommendation</h1>
+     </span>
+     <br /><br />
+     
+    
+     
+	  <h3>Summary</h3>
+
+	  <p>
+	 We released the datasets and code used in the following paper:
+	 <ul>      
+        <li>Tao Chen, Xiangnan He and Min-Yen Kan (2016). <b>Context-aware Image Tweet Modelling and Recommendation.</b> 
+			In Proceedings of the 24th ACM International Conference on Multimedia (MM'16), Amsterdam, The Netherlands.
+          [&nbsp;<A HREF="http://www.comp.nus.edu.sg/~kanmy/papers/mm16.pdf">Digital Version</A>&nbsp;]
+        </li>
+      </ul>
+      </P>
+	  
+     <h4> If you use our datasets/code, please cite our MM'16 paper.  Thanks!</h4>
+    </p>
+
+    <br style="clear: both;" />
+
+
+    <h3>Dataset: Image Tweets for Recommendation</h3>
+           
+	  <P>
+	  We crawled the dataset for image tweet recommendation task in a user-centric manner. That is, 
+	  we first sampled 926 Twitter users, and then crawled their retweeted/non-retweeted image tweets. 
+	  As restricted by Twitter policy, we anonymized user's identity and released post ID only. 
+	  With the post IDs, you can further pull the acutal posts via Twitter API. Read our <a href="instructions.html" target="_blank">tutorial</a> on using the API.</p>
+	  
+	  <p><A HREF="rating.zip">Download (12.3MB) </A></p>
+	  <p>
+	   Each line contains the rating history for a specific user. Take the following snippet of a line as an example. "user_1" is the anonymized user ID, "481049212336226304" is the post ID, and 1/0 indicates that "user_1" has retweeted/non-retweeted the tweet.</p>
+	   
+	  <pre><code>user_1,481049212336226304 0,412686436283211777 0,456501293100441601 0,470904716936085504 0,461920492258328577 0,480756504258039809 0,483177102947409920 0,433005021924708352 0,462479190500335616 0,456137444476604418 0,436983489963892736 0,446020735044435969 0,464113493692940288 0,456098157231734784 0,486188626360156160 0,463040926286643201 0,464396874976608256 0,439411779307704320 0,489779224082132992 0,455761012906422272 1,...</code></pre>
+
+
+	  <br style="clear: both;" />
+
+	 <h3>Dataset: Twitter images with manually-recognized text</h3>
+	 <p>To understand the text nature of Twitter images, we randomly sampled 500 images and identified the embedded text from the images. To the date of 20/08/2016, however, 26 images are no longer available on Twitter (e.g., deleted by user). Thus, we released the annotations for the remaining  474 image tweets.
+	 Similary, with the post IDs, you can further pull the acutal posts via Twitter API. Read our <a href="instructions.html" target="_blank">tutorial</a> on using the API.</p>
+
+	 <p><A HREF="ocr.zip">Download (60KB)</A><p>
+	  <p>In <i>image_label.txt</i>, each line contains the image tweet ID, the URL of the image and the category of images. See below as an example.</p>
+	<pre><code>451841123510935552,https://pbs.twimg.com/media/BkVDG1yIgAA3Y-4.jpg,tweet-screenshot</code></pre>
+	
+	
+	There are six image categories, namely, 
+	<ul>
+	<li>text-style: image consists purely of text.</li>
+	<li>meme-style: image overlaid with text. </li>
+	<li>tweet-screenshot: screenshot of other tweet. </li>
+	<li>other: other synthetic images that contain text. </li>
+	<li>natural: natural scene with text.</li>
+	<li>no-text: the image has no embedded text.</li>
+	</ul>
+	
+	<p>
+	For images with embedded text, you can further find their text (mannually annotated) in <i>text</i> fold of the released dataset. This dataset could be used to benchmark the performance of OCR tools on Twitter images.</p>
+	
+	
+	
+	
+	 <br style="clear: both;" />
+
+	<h3>Code: Feature-aware Matrix Factorization Mode</h3>
+	<p>We have released the code on GitHub. Please check out our <a href="https://github.com/kite1988/famf">repository</a> for details. </p>
+	 
+	 
+	 <br style="clear: both;" />
+
+		 
+      <h3>Group Members</h3>
+
+      <ul>
+        <li><a href="http://wing.comp.nus.edu.sg/~taochen/">Tao Chen</A> </li>
+        <li><a href="http://www.comp.nus.edu.sg/~xiangnan/">Xiangnan He</a>
+		<li><a href="http://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</A> - Group lead
+
+
+<!-- Footer ================================================== -->
+  <hr class="soften"/>
+  <footer class="footer">
+    <span>Designed with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</span>
+	<span style="float:right">Last Update: Aug 24, 2016 by <a href="http://wing.comp.nus.edu.sg/~chentao/">Tao Chen</a></span>
+  </footer>
+  <br><br>
+  
+    </div> <!-- /row -->
+  
+
+  
+
+  </div> <!-- /container -->
+
+
+    <!--  Javascripts -->
+    <!--
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    -->
+
+</body></html>

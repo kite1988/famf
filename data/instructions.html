@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>instructions.html</title>
+
+<link href="js/bootstrap.css" rel="stylesheet">
+
+
+<!--End of new-->
+</head>
+<body>
+  <div class="container">
+
+<br><br>
+<div id="pageContent">
+<h3>Introduction</h3>
+<p>
+As Twitter does not permit the third-party release of actual post content, we have only included the IDs of posts in our dataset. With these IDs, the actual post content can be retrieved using Twitter APIs,
+<ul>
+<li>
+ <a "https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid">statuses/show/:id</a> -- getting a single tweet per request</li>
+<li>
+<a href="https://dev.twitter.com/rest/reference/get/statuses/lookup">statues/lookup</a> -- getting Tweets in bulk (up to 100 per call)
+</li>
+</ul>
+</p>
+
+<p>Alternatively, we can use <a href="https://dev.twitter.com/overview/api/twitter-libraries">Twitter library</a> (a wrapper of Twitter APIs) to retrieve the tweets. The following guide uses the <a href="https://github.com/tweepy/tweepy">tweepy</a> library. Its
+documentation can be found <a href="https://tweepy.readthedocs.org/en/v3.5.0/">here.</a></p>
+
+
+<h3>Tweepy Library Setup</h3>
+<p>To install, run <code>pip install tweepy</code>, preferably in a virtualenv.</p>
+<h3>Register an Application</h3>
+<p>Create a new application on <a href="https://apps.twitter.com/app/new">Twitter's developer site</a>.
+When complete, this will bring you to the application's configuration page - click
+<code>Keys and Access Tokens</code> to obtain the Consumer Key and Consumer Secret needed.</p>
+<blockquote>
+<p><strong>Ensure that your keys are kept a secret, and are not revealed to the
+public.</strong> If you are going to make your scripts open-source,
+ensure that the keys are not included within.</p>
+</blockquote>
+<h3>Retrieve Posts by ID </h3>
+
+<p>This code instantiates the client library with the consumer key and secret from
+before, and uses it to retrieve posts whose IDs have been specified in a list.</p>
+<pre><code>from tweepy import API, AppAuthHandler
+
+# ENSURE THESE ARE NOT REVEALED TO THE PUBLIC!
+CONSUMER_KEY = &quot;YOUR_KEY_HERE&quot;
+CONSUMER_SECRET = &quot;YOUR_SECRET_HERE&quot;
+
+# Instantiate the client library.
+authenticator = AppAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+twitter_api = API(auth_handler=authenticator)
+
+# Post IDs to be retrieved.
+post_ids = []
+
+for post_id in post_ids:
+    # Retrieve the post from the service.
+    post = twitter_api.get_status(id=post_id)
+
+    # Tweepy returns an object for each post.
+    # Process it here.
+    print(post)
+</code></pre>
+
+</div></div>
+</body>
+</html>

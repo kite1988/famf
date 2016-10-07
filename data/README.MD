@@ -5,7 +5,7 @@ We crawled the dataset for image tweet recommendation task in a user-centric man
 	  
 Each line contains the rating history for a specific user. Take the following snippet of a line as an example. "user_1" is the anonymized user ID, "481049212336226304" is the post ID, and 1/0 indicates that "user_1" has retweeted/non-retweeted the tweet.
 	   
-``` user_1,481049212336226304 0,412686436283211777 0,456501293100441601 0,470904716936085504 0,461920492258328577 0,480756504258039809 0,483177102947409920 0,433005021924708352 0,462479190500335616 0,456137444476604418 0,436983489963892736 0,446020735044435969 0,464113493692940288 0,456098157231734784 0,486188626360156160 0,463040926286643201 0,464396874976608256 0,439411779307704320 0,489779224082132992 0,455761012906422272 1,...```
+```user_1,481049212336226304 0,412686436283211777 0,456501293100441601 0,470904716936085504 0,461920492258328577 0,480756504258039809 0,483177102947409920 0,433005021924708352 0,462479190500335616 0,456137444476604418 0,436983489963892736 0,446020735044435969 0,464113493692940288 0,456098157231734784 0,486188626360156160 0,463040926286643201 0,464396874976608256 0,439411779307704320 0,489779224082132992 0,455761012906422272 1,...```
 
 
 ## 2. Dataset: Twitter images with manually-recognized text [(60KB)](ocr.zip)
@@ -14,7 +14,8 @@ To understand the text nature of Twitter images, we randomly sampled 500 images 
 Similary, with the post IDs, you can further pull the acutal posts via Twitter API. Read our [tutorial](instructions.MD) on using the API.
 															  
 	 
-In image_label.txt, each line contains the image tweet ID, the URL of the image and the category of images. See below as an example.
+In image_label.txt, each line contains the image tweet ID, the URL of the image and the category of images. Below is an example:
+
 ``` 451841123510935552,https://pbs.twimg.com/media/BkVDG1yIgAA3Y-4.jpg,tweet-screenshot ```
 	
 															  

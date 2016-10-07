@@ -1,5 +1,4 @@
-
-##Introduction
+## Introduction
 
 As Twitter does not permit the third-party release of actual post content, we have only included the IDs of posts in our dataset. With these IDs, the actual post content can be retrieved using Twitter APIs,
 
@@ -12,7 +11,7 @@ Alternatively, we can use [Twitter library](https://dev.twitter.com/overview/api
 documentation can be found [here](https://tweepy.readthedocs.org/en/v3.5.0/).
 
 
-##Tweepy Library Setup##
+## Tweepy Library Setup##
 To install, run ```pip install tweepy```, preferably in a virtualenv.
 
 ##Register an Application
@@ -25,12 +24,13 @@ Ensure that your keys are kept a secret, and are not revealed to the
 public. If you are going to make your scripts open-source,
 ensure that the keys are not included within.
 
-##Retrieve Posts by ID 
+## Retrieve Posts by ID 
 
 This code instantiates the client library with the consumer key and secret from
 before, and uses it to retrieve posts whose IDs have been specified in a list.
 
-``` from tweepy import API, AppAuthHandler
+```
+from tweepy import API, AppAuthHandler
 
 \# ENSURE THESE ARE NOT REVEALED TO THE PUBLIC!
 

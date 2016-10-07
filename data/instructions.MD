@@ -32,28 +32,24 @@ before, and uses it to retrieve posts whose IDs have been specified in a list.
 ```
 from tweepy import API, AppAuthHandler
 
-\# ENSURE THESE ARE NOT REVEALED TO THE PUBLIC!
-
+# ENSURE THESE ARE NOT REVEALED TO THE PUBLIC!
 CONSUMER_KEY = &quot;YOUR_KEY_HERE&quot;
 CONSUMER_SECRET = &quot;YOUR_SECRET_HERE&quot;
 
-\# Instantiate the client library.
-
+# Instantiate the client library.
 authenticator = AppAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 twitter_api = API(auth_handler=authenticator)
 
-\# Post IDs to be retrieved.
+# Post IDs to be retrieved.
 
 post_ids = []
 
 for post_id in post_ids:
-    \# Retrieve the post from the service.
-    
+    # Retrieve the post from the service.
     post = twitter_api.get_status(id=post_id)
 
-    \# Tweepy returns an object for each post.
-    
-    \# Process it here.
+    # Tweepy returns an object for each post.
+    # Process it here.
     
     print(post)
  ```

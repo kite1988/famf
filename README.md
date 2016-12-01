@@ -9,6 +9,6 @@ We have additionally released the datasets used in our paper. See [data/README.M
 
 **Please cite our MM'16 paper if you use our code or dataset. Thanks!** 
 
-Author: Tao Chen (http://www.comp.nus.edu.sg/~taochen)
+Author: Tao Chen (http://www.cs.jhu.edu/~taochen)
 
    

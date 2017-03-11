@@ -22,7 +22,7 @@ We implemented three feature-aware matrix factorization (FAMF) models that use d
     [TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf] (https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags.
    
 
-### Dataset Prepration
+### Dataset Preparation
 
 If you are using our [dataset](https://github.com/kite1988/famf/blob/master/data/README.MD#1-dataset-image-tweets-for-recommendation-123mb), please:
 * Crawl the tweets from Twitter

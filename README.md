@@ -11,4 +11,18 @@ We have additionally released the datasets used in our paper. See [data/README.M
 
 Author: Tao Chen (http://www.cs.jhu.edu/~taochen)
 
+## Usage
+
+* Change the configuration in [text_visual.conf](https://github.com/kite1988/famf/blob/master/conf/text_visual.conf)
+* Run java command:
+
+  ``` java main.TextVisualMain.java conf/text_visual.conf```
+  dddd
+  If you are training with a large dataset, please allocate more memory to JVM, e.g.,
+  
+   ``` java -Xmx2g main.TextVisualMain.java conf/text_visual.conf```
+ddd
+  This code invokes the pipeline of training, testing and evaluation. The evaluation is conducted for a personalized image tweet recommendation task. Please see the paper for detailed description.
+
+
    

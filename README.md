@@ -25,37 +25,59 @@ We implemented three feature-aware matrix factorization (FAMF) models that use d
 ### Dataset Preparation
 
 If you are using our [dataset](https://github.com/kite1988/famf/blob/master/data/README.MD#1-dataset-image-tweets-for-recommendation-123mb), please:
-* Crawl the tweets from Twitter
-* 
+* Crawl the tweets and images from Twitter
+* Extract necessary features
+* Generate training and test set
 
-crawl the actual posts and images from Twitter, extract necessary features, and 
+The required input files are varied from one model to another. Please refer to model configuration file for details. Below list the format of rating and feature file:
 
-* Rating file
+* Rating file format
 
 Each line contains one positive tweet and its paired N negative tweets for a particular user. Each rating consists of four elements: user, post ID, publisher (the author of the post), and the rating (1 denotes the user has retweeted the tweet, 0 not retweeted). The negative tweets could be sampled by our time-aware negative sampling algorithem (details in the paper).
 
 ```user_1 486447896191959040 pub_65893 1,user_1 486619477933838336 pub_18 0,user_1 486596611431477248 pub_22 0,user_1 486602569419333632 pub_21 0,user_1 486532028570275840 pub_45 0...```
 
-* Feature file
+* Feature file format
 
-Each line contains the post ID followed by the word ID (either contextual or visual tags). ID should be integer [0, W), where W is the number of words for that feature.
+Each line contains the post ID followed by the feature ID, which is the index of contextual words or visual tags. Therfore, feature ID should be continuous integer [0, W), where W is the number of features for a particular type.
 
 ```544555137272791040,2275 3474 36361 9123 23694 57 714 3112 1212 19505 7409 8011 18770 5878 256 3314 2039```
 
-
-
 ###How to run
 
-* Change the configuration in [text_visual.conf](https://github.com/kite1988/famf/blob/master/conf/text_visual.conf)
+* Set the configuration file properly
 * Run java command:
+
+  ``` java main.<model>.java conf/<model>.conf```
+
+  For example, if you are using TextVisual model:
 
   ``` java main.TextVisualMain.java conf/text_visual.conf```
  
   If you are training with a large dataset, please allocate more memory to JVM, e.g.,
   
    ``` java -Xmx2g main.TextVisualMain.java conf/text_visual.conf```
-ddd
-  This code invokes the pipeline of training, testing and evaluation. The evaluation is conducted for a personalized image tweet recommendation task. Please see the paper for detailed description.
 
+### Output
+The above code invokes the pipeline of training, testing and evaluation, and generates the following files:
+* result.csv
 
+  This file contains the overall experimental results on the test set.
+* result_user.csv
+
+  This file contains the user-level experimental results on the test set.
+  
+* model
+
+  This folder contains the user factor and feature factor learned in the training set.
+  
+* prediction
+
+  This folder contains the exact score of user and tweet pair.
+  
+* config.txt
+  The experimental configuration settings.
+  
+* log.txt
+  Log information.
    

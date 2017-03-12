@@ -78,8 +78,10 @@ The above code invokes the pipeline of training, testing and evaluation, and gen
   This folder contains the exact score of user and tweet pair.
   
 * config.txt
+
   The experimental configuration settings.
   
 * log.txt
+
   Log information.
    

@@ -4,7 +4,9 @@ This is the implementation based on the following paper:
 
 Tao Chen, Xiangnan He and Min-Yen Kan (2016). [Context-aware Image Tweet Modelling and Recommendation.](https://www.comp.nus.edu.sg/~kanmy/papers/mm16.pdf) In Proceedings of the 24th ACM International Conference on Multimedia (MM'16), Amsterdam, The Netherlands.
 
-We have additionally released two datasets used in our paper. See [data/README.MD] (data/README.MD) for details.
+We have additionally released two datasets used in our paper:
+* [Image tweet for personalized recommendation] (https://github.com/kite1988/famf/blob/master/data/README.MD#1-dataset-image-tweets-for-recommendation-123mb)
+* [Twitter images with manually-recognized text] (https://github.com/kite1988/famf/blob/master/data/README.MD#2-dataset-twitter-images-with-manually-recognized-text-60kb)
 
 
 **Please cite our MM'16 paper if you use our code or dataset. Thanks!** 
@@ -29,11 +31,11 @@ If you are using our [dataset](https://github.com/kite1988/famf/blob/master/data
 * Extract necessary features
 * Generate training and test set
 
-The required input files are varied from one model to another. Please refer to model configuration file for details. Below list the format of rating and feature file:
+The required input files are varied from one model to another. Please refer to model configuration file for details. We list the format of rating and feature file in the below:
 
 * Rating file format
 
-Each line contains one positive tweet and its paired N negative tweets for a particular user. Each rating consists of four elements: user, post ID, publisher (the author of the post), and the rating (1 denotes the user has retweeted the tweet, 0 not retweeted). The negative tweets could be sampled by our time-aware negative sampling algorithem (details in the paper).
+Each line contains one positive tweet and its paired N negative tweets for a particular user. Each rating consists of four elements: user, post ID, publisher (the author of the post), and the rating (1 denotes the user has retweeted the tweet, 0 not retweeted). The negative tweets could be sampled by our time-aware negative sampling algorithm (detailed in the paper).
 
 ```user_1 486447896191959040 pub_65893 1,user_1 486619477933838336 pub_18 0,user_1 486596611431477248 pub_22 0,user_1 486602569419333632 pub_21 0,user_1 486532028570275840 pub_45 0...```
 

@@ -9,7 +9,7 @@ We have additionally released two datasets used in our paper:
 * [Twitter images with manually-recognized text] (https://github.com/kite1988/famf/blob/master/data/README.MD#2-dataset-twitter-images-with-manually-recognized-text-60kb)
 
 
-**Please cite our MM'16 paper if you use our code or dataset. Thanks!** 
+**Please cite our MM'16 paper if you use our code or datasets. Thanks!** 
 
 Author: Tao Chen (http://www.cs.jhu.edu/~taochen)
 
@@ -19,9 +19,9 @@ We implemented three feature-aware matrix factorization (FAMF) models that use d
 
   Model | Configuration File | Features
     ------------ | ------------- | -------------
-    [Text](https://github.com/kite1988/famf/blob/master/src/main/TextMain.java) | [text.conf] (https://github.com/kite1988/famf/blob/master/conf/text.conf) | Post's contextual words.
+    [Text](https://github.com/kite1988/famf/blob/master/src/main/TextMain.java) | [text.conf] (https://github.com/kite1988/famf/blob/master/conf/text.conf) | Post's contextual words
     [Visual](https://github.com/kite1988/famf/blob/master/src/main/VisualMain.java) | [visual.conf] (https://github.com/kite1988/famf/blob/master/conf/visual.conf) | Image's visual tags
-    [TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf] (https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags.
+    [TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf] (https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags
    
 
 ### Dataset Preparation
@@ -31,7 +31,7 @@ If you are using our [dataset](https://github.com/kite1988/famf/blob/master/data
 * Extract necessary features
 * Generate training and test set
 
-The required input files are varied from one model to another. Please refer to model configuration file for details. We list the format of rating and feature file in the below:
+The required input files vary from one model to another. Please refer to model configuration file for details. We list the format of rating and feature file in the below:
 
 * Rating file format
 
@@ -48,7 +48,7 @@ Each line contains the post ID followed by the feature ID, which is the index of
 ###How to run
 
 * Set the configuration file properly
-* Run java command:
+* Complile the source code and run java command:
 
   ``` java main.<model>.java conf/<model>.conf```
 

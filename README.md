@@ -47,43 +47,29 @@ Each line contains the post ID followed by the feature ID, which is the index of
 ### How to run
 
 * Set the configuration file properly
-* Complile the source code:
+* Complile the source code and run the model
 
+  * If you are using Eclipse:
 
-* Run java command:
+  Please add the the jar files in "lib" folder to project build path. See this [post](http://www.wikihow.com/Add-JARs-to-Project-Build-Paths-in-Eclipse-(Java)) on how to do this. And run the respective model with its configuration file as program parameter. 
 
-  ``` java main.<model>.java conf/<model>.conf```
-
-  For example, if you are using TextVisual model:
-
-  ``` java main.TextVisualMain.java conf/text_visual.conf```
- 
-  If you are training with a large dataset, please allocate more memory to JVM, e.g.,
-  
-   ``` java -Xmx2g main.TextVisualMain.java conf/text_visual.conf```
+  * If you are using command line:
+  ``` 
+      mkdir bin
+      javac -cp "lib/*" -d bin src/data/* src/main/* src/matrix/* src/model/* src/util/*
+      java -cp "lib/*":bin main.<model>.java conf/<model>.conf 
+  ```
+  Please replace <model> by the respective model name, e.g., TextVisualMain
 
 ### Output
 The above code invokes the pipeline of training, testing and evaluation, and generates the following files:
-* result.csv
 
-  This file contains the overall experimental results on the test set.
-* result_user.csv
-
-  This file contains the user-level experimental results on the test set.
-  
-* model
-
-  This folder contains the user factor and feature factor learned in the training set.
-  
-* prediction
-
-  This folder contains the exact score of user and tweet pair.
-  
-* config.txt
-
-  The experimental configuration settings.
-  
-* log.txt
-
-  Log information.
+File/Folder | Description
+------------ | -------------
+result.csv      | This file contains the overall experimental results on the test set.
+result_user.csv | This file contains the user-level experimental results on the test set.
+model           | This folder contains the user factor and feature factor learned in the training set.
+prediction      | This folder contains the exact score of user and tweet pair.
+config.txt      | The experimental configuration settings.
+log.txt         | Log information.
    

@@ -5,8 +5,8 @@ This is the implementation based on the following paper:
 Tao Chen, Xiangnan He and Min-Yen Kan (2016). [Context-aware Image Tweet Modelling and Recommendation.](https://www.comp.nus.edu.sg/~kanmy/papers/mm16.pdf) In Proceedings of the 24th ACM International Conference on Multimedia (MM'16), Amsterdam, The Netherlands.
 
 We have additionally released two datasets used in our paper:
-* [Image tweet for personalized recommendation] (https://github.com/kite1988/famf/blob/master/data/README.MD#1-dataset-image-tweets-for-recommendation-123mb)
-* [Twitter images with manually-recognized text] (https://github.com/kite1988/famf/blob/master/data/README.MD#2-dataset-twitter-images-with-manually-recognized-text-60kb)
+* [Image tweet for personalized recommendation](https://github.com/kite1988/famf/blob/master/data/README.MD#1-dataset-image-tweets-for-recommendation-123mb)
+* [Twitter images with manually-recognized text](https://github.com/kite1988/famf/blob/master/data/README.MD#2-dataset-twitter-images-with-manually-recognized-text-60kb)
 
 
 **Please cite our MM'16 paper if you use our code or datasets. Thanks!** 
@@ -19,9 +19,9 @@ We implemented three feature-aware matrix factorization (FAMF) models that use d
 
   Model | Configuration File | Features
     ------------ | ------------- | -------------
-    [Text](https://github.com/kite1988/famf/blob/master/src/main/TextMain.java) | [text.conf] (https://github.com/kite1988/famf/blob/master/conf/text.conf) | Post's contextual words
-    [Visual](https://github.com/kite1988/famf/blob/master/src/main/VisualMain.java) | [visual.conf] (https://github.com/kite1988/famf/blob/master/conf/visual.conf) | Image's visual tags
-    [TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf] (https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags
+    [Text](https://github.com/kite1988/famf/blob/master/src/main/TextMain.java) | [text.conf](https://github.com/kite1988/famf/blob/master/conf/text.conf) | Post's contextual words
+    [Visual](https://github.com/kite1988/famf/blob/master/src/main/VisualMain.java) | [visual.conf](https://github.com/kite1988/famf/blob/master/conf/visual.conf) | Image's visual tags
+    [TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf](https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags
    
 
 ### Dataset Preparation
@@ -48,7 +48,10 @@ Each line contains the post ID followed by the feature ID, which is the index of
 ###How to run
 
 * Set the configuration file properly
-* Complile the source code and run java command:
+* Complile the source code:
+```
+
+* Run java command:
 
   ``` java main.<model>.java conf/<model>.conf```
 

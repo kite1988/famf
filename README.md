@@ -47,6 +47,7 @@ Each line contains the post ID followed by the feature ID, which is the index of
 ### How to run
 
 * Set the configuration file properly
+
   Please see the comments (start with #) in the configuration file for guidance. In general, you should set the dataset paths and the visual/texual vocabulary size according to your dataset, and tune the model parameters (e.g., number of factors, regularizer) to obtain optimal results. For the rest parameters, you may just the default values.
   
 * Complile the source code and run the model

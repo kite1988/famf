@@ -17,12 +17,11 @@ Author: Tao Chen (http://www.cs.jhu.edu/~taochen)
 
 We implemented three feature-aware matrix factorization (FAMF) models that use different features.
 
-  Model | Configuration File | Features
-    ------------ | ------------- | -------------
-    [Text](https://github.com/kite1988/famf/blob/master/src/main/TextMain.java) | [text.conf](https://github.com/kite1988/famf/blob/master/conf/text.conf) | Post's contextual words
-    [Visual](https://github.com/kite1988/famf/blob/master/src/main/VisualMain.java) | [visual.conf](https://github.com/kite1988/famf/blob/master/conf/visual.conf) | Image's visual tags
-    [TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf](https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags
-   
+Model | Configuration File | Features
+------------ | ------------- | -------------
+[Text](https://github.com/kite1988/famf/blob/master/src/main/TextMain.java) | [text.conf](https://github.com/kite1988/famf/blob/master/conf/text.conf) | Post's contextual words
+[Visual](https://github.com/kite1988/famf/blob/master/src/main/VisualMain.java) | [visual.conf](https://github.com/kite1988/famf/blob/master/conf/visual.conf) | Image's visual tags
+[TextVisual](https://github.com/kite1988/famf/blob/master/src/main/TextVisualMain.java) | [text_visual.conf](https://github.com/kite1988/famf/blob/master/conf/text_visual.conf) | The combination of contextual words and visual tags
 
 ### Dataset Preparation
 
@@ -45,11 +44,11 @@ Each line contains the post ID followed by the feature ID, which is the index of
 
 ```544555137272791040,2275 3474 36361 9123 23694 57 714 3112 1212 19505 7409 8011 18770 5878 256 3314 2039```
 
-###How to run
+### How to run
 
 * Set the configuration file properly
 * Complile the source code:
-```
+
 
 * Run java command:
 

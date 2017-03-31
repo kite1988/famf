@@ -47,6 +47,7 @@ Each line contains the post ID followed by the feature ID, which is the index of
 ### How to run
 
 * Set the configuration file properly
+
 * Complile the source code and run the model
 
   * If you are using Eclipse:

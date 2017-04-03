@@ -60,9 +60,12 @@ Each line contains the post ID followed by the feature ID, which is the index of
   ``` 
    mkdir bin
    javac -cp "lib/*" -d bin src/data/* src/main/* src/matrix/* src/model/* src/util/*
-   java -cp "lib/*":bin main.<model> conf/<model_config>.conf 
+   java -cp "lib/*":bin main.<model> conf/<model_config>
   ```
-  Please replace \<model\>  and \<model_config\> by the respective model name and configuration file name.
+  Please replace \<model\>  and \<model_config\> by the respective model and configuration file. E.g.,
+  ```
+  java -cp "lib/*":bin main.TextVisualMain conf/text_visual.conf
+  ```
 
 ### Output
 The above code invokes the pipeline of training, testing and evaluation, and generates the following files:
